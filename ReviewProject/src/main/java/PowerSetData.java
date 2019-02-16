@@ -24,7 +24,7 @@ public class PowerSetData {
 
             StringTokenizer inputTokens = new StringTokenizer(string);
             String[] RESULT = string.split("\\s");
-            //hello
+            
 
             String str = "";
 
@@ -88,14 +88,10 @@ public class PowerSetData {
         System.arraycopy(
                 myArray, 0, copyOfMyArray, 0, myArray.length);
 
-        switch (choice) {
-        case 0 : {
-
+        if (choice == 0) {     
                     PowerSet.powerSetImplementation1(myArray);
-                    break;
-
-                  }
-        case 1 : {
+       }       
+        if (choice == 1) {
                     List<List<Integer>> ans = PowerSet.powerSetImplementation2(myArray);
 
                     for (List<Integer> item : ans) {
@@ -104,12 +100,9 @@ public class PowerSetData {
                             System.out.print(item2 + " ");
                     }
                         System.out.print("]");
-
-
-                    }
-                    break;
+                    }           
         }
-        case 2 : {
+        if (choice == 2) {
                     Set<Set<Integer>> ans = PowerSet.powerSetImplementation3(myArray);
 
                     for (Set<Integer> item : ans) {
@@ -118,13 +111,9 @@ public class PowerSetData {
                         System.out.print(item2 + " ");
                         }
                             System.out.print("] ");
-
-                        }
-
-
-                            break;
+                        }        
                     }
-        default:
+        else {
             List<List<Integer>> ans = PowerSet.powerSetImplementation2(myArray);
 
                 for (List<Integer> item : ans) {
@@ -135,12 +124,9 @@ public class PowerSetData {
                         System.out.print("] ");
 
                     }
-
-                    break;
-                }
-
         }
     }
+}
 
 
 
